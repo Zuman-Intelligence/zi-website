@@ -164,3 +164,96 @@ img { max-width: 100%; }
   .belt-item { animation: none; opacity: 1; }
   .zi-face.is-blinking .zi-eye { animation: none; }
 }
+
+/* ---------- Inner pages ---------- */
+.nav a[aria-current="page"] { color: var(--porcelain); }
+
+.page-head { padding: 112px 0 72px; border-bottom: 1px solid var(--line); }
+.page-head-grid { display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; }
+.page-head-grid > div { flex: 1 1 auto; min-width: 0; }
+.page-head h1 {
+  margin: 0; max-width: 14em; font-family: var(--sans); font-weight: 600;
+  font-size: clamp(44px, 5.6vw, 80px); line-height: 1.02; letter-spacing: -0.03em;
+}
+.page-head .lede { margin: 28px 0 0; max-width: 34em; font-size: 21px; line-height: 1.6; color: var(--haze); }
+.page-head svg { width: 120px; height: auto; flex: 0 0 auto; }
+
+.h3 { margin: 0 0 14px; font-family: var(--sans); font-weight: 600; font-size: 26px; letter-spacing: -0.01em; color: var(--porcelain); }
+.prose h3 { margin: 0 0 14px; font-family: var(--sans); font-weight: 600; font-size: 26px; color: var(--porcelain); }
+.prose strong { color: var(--porcelain); font-weight: 500; }
+.prose .amber { color: var(--amber); }
+
+/* Principles: three short statements, separated by rules (not cards) */
+.principles { list-style: none; margin: 56px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; }
+.principles li { border-top: 2px solid var(--amber); padding-top: 28px; }
+.principles p { margin: 0; font-size: 19px; line-height: 1.65; color: var(--mist); }
+
+.cta-band { padding: 112px 0; }
+.cta-band h2 { margin: 0 0 20px; font-family: var(--sans); font-weight: 600; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; }
+.cta-band p { margin: 0 0 36px; max-width: 34em; font-size: 20px; line-height: 1.65; color: var(--haze); }
+.actions { display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center; }
+.btn-line {
+  display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 999px;
+  border: 1.5px solid var(--line-strong); color: var(--porcelain); text-decoration: none;
+  font-family: var(--sans); font-weight: 600; font-size: 18px;
+}
+.btn-line:hover { border-color: var(--haze); color: var(--porcelain); }
+
+/* Products */
+.status {
+  display: inline-block; margin-bottom: 18px; padding: 6px 14px; border-radius: 999px;
+  font-family: var(--sans); font-size: 15px; font-weight: 500;
+  background: rgba(245, 166, 35, 0.14); color: var(--amber);
+}
+.status--muted { background: rgba(163, 171, 194, 0.12); color: var(--haze); }
+.product { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 64px; align-items: start; }
+.product h2 { margin: 0 0 16px; font-family: var(--sans); font-weight: 600; font-size: 52px; letter-spacing: -0.025em; }
+.product .intro { margin: 0 0 32px; font-size: 21px; line-height: 1.65; color: var(--mist); max-width: 32em; }
+.checklist { list-style: none; margin: 0 0 40px; padding: 0; display: grid; gap: 14px; }
+.checklist li { position: relative; padding-left: 32px; font-size: 19px; line-height: 1.5; color: var(--mist); }
+.checklist li::before {
+  content: ""; position: absolute; left: 4px; top: 0.35em; width: 8px; height: 14px; border-radius: 4px; background: var(--amber);
+}
+.facts { margin: 0; padding: 40px; background: var(--raised); border: 1px solid var(--line-strong); border-radius: 28px; }
+.facts svg { width: 96px; height: auto; display: block; margin-bottom: 32px; }
+.facts div { padding: 18px 0; border-top: 1px solid var(--line-strong); }
+.facts dt { font-size: 16px; color: var(--haze); margin-bottom: 4px; }
+.facts dd { margin: 0; font-family: var(--sans); font-weight: 500; font-size: 19px; color: var(--porcelain); }
+.upcoming { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 48px; }
+.upcoming article { padding: 40px; border: 1px dashed var(--line-strong); border-radius: 28px; }
+.upcoming p { margin: 0; font-size: 19px; line-height: 1.65; color: var(--haze); }
+
+/* Contact form */
+.form { display: grid; gap: 24px; }
+.form .row-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.form label { display: grid; gap: 10px; font-family: var(--sans); font-size: 16px; font-weight: 500; color: var(--mist); }
+.form input, .form select, .form textarea {
+  width: 100%; min-height: 52px; padding: 12px 16px; border-radius: 14px;
+  border: 1.5px solid var(--line-strong); background: var(--raised); color: var(--porcelain);
+  font-family: var(--serif); font-size: 18px;
+}
+.form textarea { min-height: 180px; resize: vertical; line-height: 1.6; }
+.form input:focus, .form select:focus, .form textarea:focus { outline: 2px solid var(--amber); outline-offset: 2px; border-color: var(--amber); }
+.form ::placeholder { color: #7F88A3; }
+.form button { border: 0; cursor: pointer; }
+.form .hidden { display: none; }
+.contact-side { display: grid; gap: 40px; align-content: start; }
+.contact-side p { margin: 0; font-size: 19px; line-height: 1.6; color: var(--mist); }
+
+/* Thanks */
+.thanks { padding: 160px 0; text-align: left; }
+.thanks svg { width: 120px; height: auto; margin-bottom: 40px; }
+.thanks h1 { margin: 0 0 20px; font-family: var(--sans); font-weight: 600; font-size: clamp(48px, 6vw, 80px); letter-spacing: -0.03em; }
+.thanks p { margin: 0 0 40px; font-size: 21px; line-height: 1.6; color: var(--haze); max-width: 32em; }
+
+.foot-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.foot-links a { color: var(--haze); text-decoration: none; }
+.foot-links a:hover { color: var(--porcelain); }
+
+@media (max-width: 900px) {
+  .page-head { padding: 72px 0 48px; }
+  .page-head svg { display: none; }
+  .principles, .product, .upcoming, .form .row-2 { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .cta-band { padding: 80px 0; }
+  .thanks { padding: 96px 0; }
+}
