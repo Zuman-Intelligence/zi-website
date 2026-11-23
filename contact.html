@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Zuman Intelligence</title>
+  <meta name="description" content="Contact Zuman Intelligence for product enquiries, Kural early access, investment or careers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:image" content="assets/og-icon.png">
+  <meta name="theme-color" content="#0A0A0B">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="Zuman Intelligence home">
+      <img src="assets/logo.png" class="brand-logo" alt="Zuman Intelligence">
+      <span class="brand-sub">INTELLIGENCE</span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="btn">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h1>Let's <span class="gold">talk.</span></h1>
+      <p class="lead">Send us a message and we'll reply by email, usually within one working day.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:16px">
+    <div class="wrap split">
+      <!-- Netlify Forms: submissions are emailed to siva@zumanintelligence.com (set in Netlify form notifications) -->
+      <form class="form" name="contact" method="POST" action="thanks.html" data-netlify="true" netlify-honeypot="company-website">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden"><label>Leave this empty: <input name="company-website"></label></p>
+
+        <div class="row-2">
+          <label>Your name
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>Email
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+        </div>
+        <div class="row-2">
+          <label>Phone (optional)
+            <input type="tel" name="phone" autocomplete="tel">
+          </label>
+          <label>I'm reaching out about
+            <select name="topic" id="topic">
+              <option>Kural early access</option>
+              <option>Product enquiry</option>
+              <option>Investment</option>
+              <option>Careers</option>
+              <option>Partnership</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+        <label>Message
+          <textarea name="message" required placeholder="Tell us a little about your business or your enquiry"></textarea>
+        </label>
+        <div><button type="submit" class="btn">Send message</button></div>
+      </form>
+
+      <div class="contact-side">
+        <div class="card">
+          <h3>Email</h3>
+          <p><a class="gold" href="mailto:siva@zumanintelligence.com">siva@zumanintelligence.com</a></p>
+        </div>
+        <div class="card">
+          <h3>Based in</h3>
+          <p>Tirupur, Tamil Nadu, India</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span data-year></span> Zuman Intelligence · One intelligence. Infinite possibilities. · Tirupur, India</span>
+    <div class="footer-links">
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="mailto:siva@zumanintelligence.com">siva@zumanintelligence.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+<script>
+  // Pre-select the topic when arriving from a "Join early access" / "Investor enquiry" link
+  const t = new URLSearchParams(location.search).get('topic');
+  const sel = document.getElementById('topic');
+  if (t && sel) [...sel.options].forEach(o => { if (o.text === t) o.selected = true; });
+</script>
+</body>
+</html>
