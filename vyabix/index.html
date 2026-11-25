@@ -476,6 +476,22 @@ h3{letter-spacing:-.02em}
 [hidden],.pv[hidden]{display:none!important}
 .hero h1{color:var(--plum)}
 .hero h1 em{color:var(--plum-ink)}
+
+.baseline{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin-bottom:18px}
+.bl-txt{display:grid;gap:10px}
+.bl-tag{justify-self:start;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--plum-ink);background:var(--mango);padding:4px 10px;border-radius:999px}
+.bl-txt p{color:var(--muted);font-size:15.5px}
+.bl-card{background:var(--soft);border:1px dashed var(--plum-300);border-radius:16px;padding:18px;display:grid;gap:12px}
+.bl-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
+.bl-head strong{font-size:15px}
+.bl-head span{font-size:12.5px;color:var(--muted)}
+.bl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.bl-grid div{background:#fff;border-radius:10px;padding:10px 12px;display:grid;gap:2px}
+.bl-grid small{font-size:12px;color:var(--muted)}
+.bl-grid b{font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}
+.bl-foot{font-size:13.5px;color:var(--fg)}
+.bl-foot b{color:var(--ok)}
+@media (max-width:860px){.baseline{grid-template-columns:1fr;padding:20px}.bl-grid{grid-template-columns:1fr 1fr}}
 body{margin:0}img{max-width:100%}\n</style>
 </head>
 <body>
@@ -563,6 +579,25 @@ body{margin:0}img{max-width:100%}\n</style>
       <span class="kicker">How it works</span>
       <h2>Your whole marketing routine, in one WhatsApp chat</h2>
       <p class="lead">Install the Vyabix app once to connect your pages. After that, almost everything happens in WhatsApp. If you can send a photo on WhatsApp, you can use Vyabix.</p>
+    </div>
+    <div class="baseline">
+      <div class="bl-txt">
+        <span class="bl-tag">Step 0 · At sign-up</span>
+        <h3>First, we measure your starting point</h3>
+        <p>When you sign up, Vyabix studies your existing Google, Instagram and Facebook profiles and records your pre-Vyabix numbers. Every monthly report compares against this baseline, so you can see exactly what changed.</p>
+      </div>
+      <div class="bl-card" aria-label="Sample starting-point report">
+        <div class="bl-head"><strong>Your starting point</strong><span>Sweet Crumbs Bakery · Before Vyabix</span></div>
+        <div class="bl-grid">
+          <div><small>Profile visits / month</small><b>740</b></div>
+          <div><small>Google reviews</small><b>18 · ★4.2</b></div>
+          <div><small>Posts last 30 days</small><b>2</b></div>
+          <div><small>Enquiries / month</small><b>9</b></div>
+          <div><small>Instagram followers</small><b>412</b></div>
+          <div><small>Unanswered reviews</small><b>11</b></div>
+        </div>
+        <p class="bl-foot">After 90 days: <b>2,340</b> visits, <b>46</b> enquiries, <b>★4.8</b></p>
+      </div>
     </div>
     <div class="steps">
       <div class="step"><span class="n">1</span><span class="time">7:30 AM</span><h3>Get today's idea</h3><p>One simple, specific task for your business. "Show the way to your shop." "Film your best-selling cake."</p></div>
@@ -719,7 +754,7 @@ body{margin:0}img{max-width:100%}\n</style>
     <div class="txt">
       <span class="kicker">Monthly report</span>
       <h2>Know exactly how you're growing</h2>
-      <p class="lead">On the 1st of every month, a short report lands in your WhatsApp. No jargon. Just the numbers that matter and the wins you told us about.</p>
+      <p class="lead">On the 1st of every month, a short report lands in your WhatsApp, compared against the starting point we recorded when you joined. No jargon. Just the numbers that matter and the wins you told us about.</p>
       <ul class="checks">
         <li>Profile visits and Google My Business calls</li>
         <li>New reviews and your average rating</li>
@@ -866,6 +901,7 @@ body{margin:0}img{max-width:100%}\n</style>
       <details><summary>Will anything be posted without my permission?</summary><p>Never. Every post is sent to you as a preview first. It goes live only after you tap Approve. You can also edit the caption or skip the idea.</p></details>
       <details><summary>Which platforms do you post to?</summary><p>Google My Business, Instagram, Facebook, LinkedIn and X. You can switch any of them off by sending a message.</p></details>
       <details><summary>How do the daily ideas work?</summary><p>Each morning we send one simple task based on your industry, the season, upcoming festivals and what got the most enquiries for you recently. It takes 1 to 2 minutes to do.</p></details>
+      <details><summary>How do I know Vyabix is working?</summary><p>At sign-up we study your existing profiles and record your starting numbers: profile visits, reviews and rating, posting frequency, followers and enquiries. Every monthly report shows your growth against that baseline.</p></details>
       <details><summary>How soon will I see results?</summary><p>Most businesses see more profile visits in the first 2 weeks and a steady rise in enquiries within 30 to 60 days of posting regularly.</p></details>
       <details><summary>I don't have a website. Is that a problem?</summary><p>Not at all. Every plan includes a free one-page website with your photos, timings, map and a WhatsApp order button.</p></details>
       <details><summary>What are "wins"?</summary><p>When a post brings you an order, booking or call, just tell us in the chat. We record it, show it in your monthly report and suggest more ideas like the ones that worked.</p></details>
@@ -901,12 +937,9 @@ body{margin:0}img{max-width:100%}\n</style>
 <script>
 (function(){
   /* WhatsApp CTA: replace the number with the real business number */
-  /* Set WA_NUMBER (country code + number, digits only, e.g. "919876543210") to open WhatsApp directly.
-     While it is empty, the buttons go to the Zuman contact form instead. */
-  var WA_NUMBER = "";
-  var waHref = WA_NUMBER ? "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hi Vyabix, I want to grow my business")
-                         : "../contact.html?topic=Vyabix%20early%20access";
-  document.querySelectorAll('.wa-link').forEach(function(a){ a.href = waHref; if(!WA_NUMBER){ a.removeAttribute('target'); } });
+  var WA_NUMBER = "919597639777";
+  var waHref = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hi Vyabix, I want to grow my business");
+  document.querySelectorAll('.wa-link').forEach(function(a){ a.href = waHref; });
 
   /* nav background on scroll */
   var nav = document.getElementById('nav');
