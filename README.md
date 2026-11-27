@@ -4,7 +4,8 @@ Company website for zumanintelligence.com. Plain HTML and CSS, no build step.
 
 ## Pages
 - `index.html`: Home
-- `products.html`: Products (Kural plus upcoming agents)
+- `products.html`: Products (Vyabix plus upcoming agents)
+- `vyabix/index.html`: Vyabix product website (self-contained page, its own styles and scripts; WhatsApp number is set in `WA_NUMBER` near the bottom)
 - `about.html`: About, story and principles
 - `contact.html`: Contact form (Netlify Forms, emails siva@zumanintelligence.com)
 - `thanks.html`: Shown after the form is submitted
